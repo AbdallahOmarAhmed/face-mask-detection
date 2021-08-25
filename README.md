@@ -34,7 +34,7 @@ to download my model : https://drive.google.com/file/d/1gsuTLRhZX7DJaOv-e7sVV4xv
       
       $ python3 test_model.py
       
-* Add a video to test and run the model :
+* Add a video to test then run the model :
 
       $ python3 video_tester.py
      
