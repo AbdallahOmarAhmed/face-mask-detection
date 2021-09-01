@@ -48,4 +48,4 @@ to download my model : https://drive.google.com/file/d/1iK-lTpm3HtHBLbusS72yUsUQ
 
       $ python3 video_full.py
 
-Note : the name of the video that you want to test should be ' test.mp4 '  
+Note : the name of the video that you want to test must be ' test.mp4 '  and the output video name will be ' outpy.avi '
