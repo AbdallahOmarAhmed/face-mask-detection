@@ -28,13 +28,17 @@ to download my model : https://drive.google.com/file/d/1iK-lTpm3HtHBLbusS72yUsUQ
 
 # Usage
 
+* Clone the Repo :
+
+      $ git clone https://github.com/AbdallahOmarAhmed/face-mask-detection
+
 * Download the data set and put it in your project dir :
   
       https://www.kaggle.com/ashishjangra27/face-mask-12k-images-dataset
-  
+
 * Run the train file to start training : 
       
-      $ python3 face_mask_train.py
+      $ python3 train.py
           
 * Run the test file to Calculate accuracy : 
       
@@ -42,6 +46,6 @@ to download my model : https://drive.google.com/file/d/1iK-lTpm3HtHBLbusS72yUsUQ
       
 * Add a video to test then run the model :
 
-      $ python3 video_tester.py
+      $ python3 video_full.py
 
 Note : the name of the video that you want to test should be ' test.mp4 '  
