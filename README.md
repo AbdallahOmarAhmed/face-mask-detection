@@ -1,5 +1,7 @@
 # face-mask-detection
-Hello welcome to my face mask detection, its a python model which can detect faces and classify if the face has a mask or not
+Hello welcome to my face mask detection
+
+its a python model which can detect faces with FaceBoxes : https://github.com/zisianw/FaceBoxes.PyTorch and classify if the face has a mask or not
 
 # Requirements
 Ubuntu      " It's only tested on Ubuntu, so it may not work on Windows "
@@ -11,8 +13,6 @@ numpy : https://numpy.org/
 PyTorch : https://pytorch.org/
 
 torchvision : https://pypi.org/project/torchvision/
-
-face_boxes : https://github.com/zisianw/FaceBoxes.PyTorch
 
 # Accuracy  
 
