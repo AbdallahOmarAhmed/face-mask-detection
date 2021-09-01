@@ -12,13 +12,19 @@ PyTorch : https://pytorch.org/
 
 torchvision : https://pypi.org/project/torchvision/
 
-face_recognition : https://github.com/ageitgey/face_recognition
+face_boxes : https://github.com/zisianw/FaceBoxes.PyTorch
 
 # Accuracy  
 
-my model accuracy is : 97.5
+train set accuracy is : 100%
 
-to download my model : https://drive.google.com/file/d/1gsuTLRhZX7DJaOv-e7sVV4xvvgj_lBvd/view?usp=sharing
+test set accuracy is : 99.8%
+
+val set accuracy is : 100%
+
+to download my model : https://drive.google.com/file/d/1iK-lTpm3HtHBLbusS72yUsUQUxl0f842/view?usp=sharing
+
+https://user-images.githubusercontent.com/49597655/131669090-5015200c-cdd1-4020-b3d5-79d7dfab9d0b.mp4
 
 # Usage
 
