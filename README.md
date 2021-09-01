@@ -14,6 +14,8 @@ PyTorch : https://pytorch.org/
 
 torchvision : https://pypi.org/project/torchvision/
 
+openCV : https://pypi.org/project/opencv-python/
+
 # Accuracy  
 
 train set accuracy is : 100%
