@@ -24,7 +24,7 @@ val set accuracy is : 100%
 
 to download my model : https://drive.google.com/file/d/1iK-lTpm3HtHBLbusS72yUsUQUxl0f842/view?usp=sharing
 
-https://user-images.githubusercontent.com/49597655/131669090-5015200c-cdd1-4020-b3d5-79d7dfab9d0b.mp4
+![output](https://user-images.githubusercontent.com/49597655/131670064-d817581b-e0fc-4573-8cf8-f51488723963.gif)
 
 # Usage
 
