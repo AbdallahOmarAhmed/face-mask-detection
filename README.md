@@ -6,7 +6,7 @@ its a python model which can detect faces with FaceBoxes : https://github.com/zi
 # Requirements
 Ubuntu      " It's only tested on Ubuntu, so it may not work on Windows "
 
-GPU : Any GPU that is works with PyTorch 
+GPU : Any GPU that is works with PyTorch with atleast 4GP vram
 
 numpy : https://numpy.org/
 
@@ -17,6 +17,8 @@ torchvision : https://pypi.org/project/torchvision/
 openCV : https://pypi.org/project/opencv-python/
 
 # Accuracy  
+
+data set : https://www.kaggle.com/ashishjangra27/face-mask-12k-images-dataset
 
 train set accuracy is : 100%
 
