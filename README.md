@@ -48,7 +48,7 @@ to download my model : https://drive.google.com/drive/folders/1dYjueS949d7azIlx-
       
       $ python3 train_model.py
       
-* OR : download my model and put it in the weights file 
+* OR : download my model and put it in the weights folder 
           
 * Run the test file to Calculate accuracy : 
       
