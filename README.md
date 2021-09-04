@@ -35,6 +35,10 @@ to download my model : https://drive.google.com/drive/folders/1dYjueS949d7azIlx-
 * Clone the Repo :
 
       $ git clone https://github.com/AbdallahOmarAhmed/face-mask-detection
+      
+* Compile the nms :
+
+      $ ./make.sh
 
 * Download the data set and put it in your project dir :
   
@@ -42,7 +46,9 @@ to download my model : https://drive.google.com/drive/folders/1dYjueS949d7azIlx-
 
 * Run the train file to start training : 
       
-      $ python3 train.py
+      $ python3 train_model.py
+      
+* OR : download my model and put it in the weights file 
           
 * Run the test file to Calculate accuracy : 
       
@@ -50,6 +56,10 @@ to download my model : https://drive.google.com/drive/folders/1dYjueS949d7azIlx-
       
 * Add a video to test then run the model :
 
-      $ python3 video_full.py
+      $ python3 make_video.py
+ 
+* Convert the models to onnx : 
+
+      $ python3 make_onnx_copy.py
 
 Note : the name of the video that you want to test must be ' test.mp4 '  and the output video name will be ' outpy.avi '
