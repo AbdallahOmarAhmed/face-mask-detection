@@ -13,7 +13,7 @@ if __name__ == "__main__":
     print(device)
 
     # hayper parametars
-    num_epochs = 60
+    num_epochs = 40
     learning_rate = 0.001
     batch_size = 50
 
