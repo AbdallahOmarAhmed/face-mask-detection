@@ -38,7 +38,7 @@ to download my model : https://drive.google.com/drive/folders/1dYjueS949d7azIlx-
       
 * Compile the nms :
 
-      $ ./make.sh
+      $ bash ./make.sh
 
 * Download the data set and put it in your project dir :
   
