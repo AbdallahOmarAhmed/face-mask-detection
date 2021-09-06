@@ -1,19 +1,10 @@
-import cv2
-import numpy as np
+
 import torchvision
-from PIL import Image
 
 from torch import nn
-import torch.utils.model_zoo as model_zoo
 import torch.onnx
-import onnx
-import onnxruntime as ort
-from torchvision import transforms
+
 from models.faceboxes import FaceBoxes
-from utils.nms_wrapper import nms
-from data import cfg
-from layers.functions.prior_box import PriorBox
-from utils.box_utils import decode
 
 def remove_prefix(state_dict, prefix):
     ''' Old style model is stored with all names of parameters sharing common prefix 'module.' '''

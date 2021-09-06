@@ -1,8 +1,6 @@
 import torch
 import numpy as np
-import torch.nn as nn
 from torch.utils.data import Dataset, DataLoader
-import torchvision
 import os
 from torchvision.io import read_image
 from torchvision import transforms

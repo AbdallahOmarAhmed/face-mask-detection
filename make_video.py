@@ -9,7 +9,6 @@ from PIL import Image
 import cv2
 from torchvision import transforms
 from face_box import load_model
-from face_box import*
 from models.faceboxes import FaceBoxes
 from utils.box_utils import decode
 from layers.functions.prior_box import PriorBox
