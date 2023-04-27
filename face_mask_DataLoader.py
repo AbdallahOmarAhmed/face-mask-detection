@@ -6,8 +6,8 @@ from torchvision.io import read_image
 from torchvision import transforms
 
 class faceMaskDataSet(Dataset):
-    pathMask = 'Face Mask Dataset/Train/WithMask/'
-    pathNoMask = 'Face Mask Dataset/Train/WithoutMask/'
+    pathMask = 'archive/Face Mask Dataset/Train/WithMask/'
+    pathNoMask = 'archive/Face Mask Dataset/Train/WithoutMask/'
     def __init__(self):
         self.myTransforms =  transforms.Resize(256)
         self.maskData = os.listdir(faceMaskDataSet.pathMask)
@@ -20,8 +20,8 @@ class faceMaskDataSet(Dataset):
         return len(self.X)
     def __getitem__(self,index): 
         self.y = self.Y[index]
-        self.filePath = "Face Mask Dataset/Train/WithMask/" if self.y==1.\
-            else "Face Mask Dataset/Train/WithoutMask/"
+        self.filePath = "archive/Face Mask Dataset/Train/WithMask/" if self.y==1.\
+            else "archive/Face Mask Dataset/Train/WithoutMask/"
         self.path = self.X[index]
         self.image = read_image(self.filePath + self.path)
         self.x = self.myTransforms(self.image)/255
@@ -29,8 +29,8 @@ class faceMaskDataSet(Dataset):
 
 
 class faceMaskTestSet(Dataset):
-    pathMask = 'Face Mask Dataset/Test/WithMask/'
-    pathNoMask = 'Face Mask Dataset/Test/WithoutMask/'
+    pathMask = 'archive/Face Mask Dataset/Test/WithMask/'
+    pathNoMask = 'archive/Face Mask Dataset/Test/WithoutMask/'
     def __init__(self):
         self.myTransforms =  transforms.Resize(256)
         self.maskData = os.listdir(faceMaskTestSet.pathMask)
@@ -43,8 +43,8 @@ class faceMaskTestSet(Dataset):
         return len(self.X)
     def __getitem__(self,index):     
         self.y = self.Y[index]
-        self.filePath = "Face Mask Dataset/Test/WithMask/" if self.y==1\
-            else "Face Mask Dataset/Test/WithoutMask/"
+        self.filePath = "archive/Face Mask Dataset/Test/WithMask/" if self.y==1\
+            else "archive/Face Mask Dataset/Test/WithoutMask/"
         self.path = self.X[index]
         self.image = read_image(self.filePath + self.path)
         self.x = self.myTransforms(self.image)/255
@@ -52,8 +52,8 @@ class faceMaskTestSet(Dataset):
 
 
 class faceMaskAccSet(Dataset):
-    pathMask = 'Face Mask Dataset/Validation/WithMask/'
-    pathNoMask = 'Face Mask Dataset/Validation/WithoutMask/'
+    pathMask = 'archive/Face Mask Dataset/Validation/WithMask/'
+    pathNoMask = 'archive/Face Mask Dataset/Validation/WithoutMask/'
     def __init__(self):
         self.myTransforms =  transforms.Resize(256)
         self.maskData = os.listdir(faceMaskAccSet.pathMask)
@@ -66,8 +66,8 @@ class faceMaskAccSet(Dataset):
         return len(self.X)
     def __getitem__(self,index):     
         self.y = self.Y[index]
-        self.filePath = "Face Mask Dataset/Validation/WithMask/" if self.y==1\
-            else "Face Mask Dataset/Validation/WithoutMask/"
+        self.filePath = "archive/Face Mask Dataset/Validation/WithMask/" if self.y==1\
+            else "archive/Face Mask Dataset/Validation/WithoutMask/"
         self.path = self.X[index]
         self.image = read_image(self.filePath + self.path)
         self.x = self.myTransforms(self.image)/255

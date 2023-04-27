@@ -1,3 +1,6 @@
+from timeit import default_timer as timer
+
+start = timer()
 import torch
 import numpy as np
 import torch.nn as nn
@@ -43,58 +46,36 @@ dataLoader = DataLoader(data, batch_size=100, num_workers=8)
 model = torchvision.models.resnet18()
 n = model.fc.in_features
 model.fc = nn.Linear(n, 1)
-q_model = load('test',
-                        model,
-                        dataloader=dataLoader)
-q_model.eval()
-q_model.to(device)
-data_train = faceMaskDataSet()
-dataloader_train = DataLoader(data_train, batch_size=1,\
- shuffle=False, num_workers=6)
+model.load_state_dict(torch.load("weights/modelTR.pth"))
+# q_model = load('test',
+#                         model,
+#                         dataloader=dataLoader)
+# q_model.eval()
+# q_model.to(device)
+model.eval()
 
-data_test = faceMaskTestSet()
-dataloader_test = DataLoader(data_test, batch_size=1,\
- shuffle=False, num_workers=6)
+x = torch.randn(1,3,1024,1024)
+start = timer()
+model(x)
+end = timer()
+print(end-start)
 
-data_val = faceMaskAccSet()
-dataloader_val = DataLoader(data_val, batch_size=1,\
- shuffle=False, num_workers=6)
-
-with torch.no_grad():
-        n_correct = 0
-        n_total = 0
-        for x,y in tqdm(dataloader_test):
-            image = x.to(device)
-            label = y.to(device)
-            output = q_model(image)
-            pred = 1 if output >= 0.5 else 0  
-            n_total += 1
-            n_correct += (pred == label).item()
-        acc = 100.0 * n_correct / n_total
-        print('test accuracy = ',acc)
-
-with torch.no_grad():
-    n_correct = 0
-    n_total = 0
-    for x, y in tqdm(dataloader_train):
-        image = x.to(device)
-        label = y.to(device)
-        output = q_model(image)
-        pred = 1 if output >= 0.5 else 0
-        n_total += 1
-        n_correct += (pred == label).item()
-    acc = 100.0 * n_correct / n_total
-    print('train accuracy = ', acc)
-
-with torch.no_grad():
-    n_correct = 0
-    n_total = 0
-    for x, y in tqdm(dataloader_val):
-        image = x.to(device)
-        label = y.to(device)
-        output = q_model(image)
-        pred = 1 if output >= 0.5 else 0
-        n_total += 1
-        n_correct += (pred == label).item()
-    acc = 100.0 * n_correct / n_total
-    print('val accuracy = ', acc)
+#
+# data_train = faceMaskDataSet()
+# dataloader_train = DataLoader(data_train, batch_size=100,\
+#  shuffle=False, num_workers=6)
+#
+# start = timer()
+# with torch.no_grad():
+#     n_correct = 0
+#     n_total = 0
+#     for x, y in tqdm(dataloader_train):
+#         output = model(x)
+#         pred = output >= 0.5
+#         n_total += 1
+#         n_correct += torch.sum((pred == y)).item()
+#
+#     acc = 100.0 * n_correct / n_total
+#     print('train accuracy = ', acc)
+# end = timer()
+# print(end-start)
